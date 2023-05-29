@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turtle Treasures | Purchase and donate </title>
+    <link rel="stylesheet" href="./donate.css" type="text/css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+<link rel="manifest" href="./site.webmanifest">
+<link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+
+<!--Navigation bar-->
+<header>
+    <div class="logo">
+        <a href="./index.html">Turtle Treasures</a>
+    </div>
+
+    <input type="checkbox" id="nav_check" hidden>
+    <nav class="nav">
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./categories.html">Categories</a></li>
+            <li><a href="./hikkaduwa.html">Hikkaduwa</a></li>
+            <li><a href="./threats.html">Threats</a></li>
+            <li><a href="#" class="drop">Other Hatcheries▼</a>
+                <ul class="dropdown">
+                    <li><a href="./kosgoda.html">Kosgoda</a></li>
+                    <li><a href="./bentota.html">Bentota</a></li>
+                </ul>
+            </li>
+            <li><a href="./donate.html"  class="active">Purchase and donate</a></li>
+            <li><a href="./contact.html">Contact Us</a></li>
+            
+        </ul>
+    </nav>
+    <label for="nav_check" class="menu">
+        <div></div>
+        <div></div>
+        <div></div>
+    </label> 
+</header>
+
+<!--main image-->
+<section class="background">
+    <img src="./images/donate/mainimg.jpg" alt="turtle on palms">
+    
+</section>
+<h1>Donate and shop with us </h1>
+<!--Introduction of donate page-->
+    <article>
+        <div class="intro-don">
+        <h2>How does your donation help sea turtles?</h2>
+        <p>By donating, you become an important part of our team, with each of the dollar you donate will create a great impact on thousands of turtles, your contribution will directly support us to research, rehabilitate, rescue and release turtles to their natural habitat.Furthermore it will enable us to establish safe areas for turtles, conduct educational programs and strengthen conservation policies
+        It doesnt have to be a big amount, any amount would create a major influence on this mission.Below given are some projects in which the donated funds adds up into.</p>
+        </div>
+    </article>
+
+<!--Types of Donation-->
+<h2>Types of Donation</h2>
+<div class="wrapper">
+    
+    <div class="text-box">
+        <div class="image"><img src="./images/donate/hatchling-olive-ridley-sea-turtles-in-hand.jpg" ></div>
+        
+        <h3>One shell at a time</h3>
+        <p>The project "One shell at a time" pays attention on each and every sea turtle individually. </p>
+        <p>
+            Your donation here would help to conserve and take extra care on every single turtle present on the hatchery,here we ensure that all the turtles get the correct amount of nutrition to grow into a well matured sea turtle before being released into the ocean.And also funds will be used for the maintenance of the turtle tanks and the surrounding of the turtle environment.
+            <br>
+            <div id="seventy"> 70% of funds raised</div>
+        </p>    
+    </div>
+
+    <div class="text-box">
+        <div class="image"><img src="./images/donate/pexels-salo-al-71101.jpg"></div>
+        
+        <h3>Hatchery constructions</h3>
+        <p>The project "Hatchery Constructions" will build and renovate turtle hatcheries. </p>
+        <p>
+            The funds collected will be used on constructing new turtle hatcheries with advanced facilities for the turtles to breed,These hatcheries will ensure optimal conditions for the eggs such as humdity and temperature, this would in return increase the hatching success rate and increase the number of healthy hatchlings. 
+            <br>
+            <div id="ninty"> 90% of funds raised</div>
+        </p>    
+    </div>
+
+    <div class="text-box">
+        <div class="image"><img src="./images/donate/bg.jpg" alt="baby turtle on the beach"></div>
+        
+        <h3>Defending the shores</h3>
+        <p>The project"Defending the shores"intends to safeguard the turtles by safegaurding the shores </p>
+        <p>
+            Funds collected under this project the funds collected are used to create an environment in which the turtles can move around freely without any threats,Here education and awareness programs to educate the visitors, regular cleaning of the arine debris will be implemented. 
+            <br>
+            <div  id="fifty"> 50% of funds raised</div>
+        </p>    
+    </div>
+    
+    
+</div>
+
+
+
+
+
+
+<!--Donation form--> 
+<section class="Donation">
+    <form action="" class="container">
+        <h3>Donate Here!</h3>
+        
+        <fieldset>
+            <legend>Donor Details</legend><br>
+            <p>
+            <label for="Fullname">Full Name:</label>
+            <input type="text" name="name" id="fname" placeholder="Name as per card" required>
+            </p>
+
+            <p>
+                <br>
+            <label for="Card">Card:</label>
+            <select name="card" id="card" size="1">
+                <option value="VISA">VISA </option>
+                <option value="Master">Master card</option>
+                <option value="AMEX">AMEX</option>
+            </select>
+            </p>
+            <br>
+            <p>
+            <label for="number">Card Number:</label>
+            <input type="text" name="number" id="num" placeholder="xxxx-xxxx-xxxx-xxxx" required>
+            </p>
+            <br>
+            <p>
+            <label for="CVV">CVV</label>
+            <input type="password" name="CVV" id="cvv" maxlength="3" minlength="3" required>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Donation</legend><br>
+            <p>
+                <label for="amount">Amount</label>
+            </p>
+            <p>
+                <input type="radio" name="amount" class="amnt" value="5">$5
+            </p>
+
+            <p>
+                <input type="radio" name="amount" class="amnt" value="10">$10
+            </p>
+
+            <p>
+                <input type="radio" name="amount" class="amnt" value="15">$15
+            </p>
+
+            <p>
+                <input type="radio" name="amount" class="amnt" value="20">$20
+            </p>
+
+            <p>
+                <input type="radio" name="amount" class="amnt" value="25">$25
+            </p>
+            <br>
+            <p>
+                <label for="pref">Preferred Amount:</label>
+                <input type="text" name="pref" id="pref" placeholder="$xxx">
+            </p>
+            <br>
+        </fieldset>
+        <button id="btn">Donate</button>
+    </form>
+
+</section>   
+   
+<section class="products">
+    <h3>Our Products</h3>
+    <div class="all-products">
+        <div class="product">
+            <img src="./images/shop/neck.jpg">
+            <div class="product-info">
+                <h4 class="product-title">Shell necklace</h4>
+                <p class="product-price"> $10.00</p>
+                <a class="product-btn" href="#">Buy Now</a>  
+            </div>
+        </div>
+
+        <div class="product">
+            <img src="./images/shop/bracelet.jpg">
+            <div class="product-info">
+                <h4 class="product-title">Shell bracelet</h4>
+                <p class="product-price"> $8.00</p>
+                <a class="product-btn" href="#">Buy Now</a>  
+            </div>
+        </div>
+
+        <div class="product">
+            <img src="./images/shop/resin.jpg">
+            <div class="product-info">
+                <h4 class="product-title">Sea resin art</h4>
+                <p class="product-price"> $40.00</p>
+                <a class="product-btn" href="#">Buy Now</a>  
+            </div>
+        </div>
+
+
+        <div class="product">
+            <img src="./images/shop/trtle souvenier.jpg" id="turt">
+            <div class="product-info">
+                <h4 class="product-title">Turtle souvenir</h4>
+                <p class="product-price"> $10.00</p>
+                <a class="product-btn" href="#">Buy Now</a>  
+            </div>
+        </div>
+        <div class="product">
+            <img src="./images/shop/tshirt.jpg" id="turt">
+            <div class="product-info">
+                <h4 class="product-title">Tshirt</h4>
+                <p class="product-price"> $15.00</p>
+                <a class="product-btn" href="#">Buy Now</a>  
+            </div>
+        </div>
+        <div class="product">
+            <img src="./images/shop/turtkeyt.jpg" id="turt">
+            <div class="product-info">
+                <h4 class="product-title">Turtle Keytag</h4>
+                <p class="product-price"> $10.00</p>
+                <a class="product-btn" href="#">Buy Now</a>  
+            </div>
+        </div>
+        <div class="product">
+            <img src="./images/shop/Seashells-Mini-Boat.jpg" id="turt">
+            <div class="product-info">
+                <h4 class="product-title">Handmade shells Boat</h4>
+                <p class="product-price"> $40.00</p>
+                <a class="product-btn" href="#">Buy Now</a>  
+            </div>
+        </div>
+        <div class="product">
+            <img src="./images/shop/frame.jpg" id="turt">
+            <div class="product-info">
+                <h4 class="product-title">Handmade shell frame</h4>
+                <p class="product-price"> $10.00</p>
+                <a class="product-btn" href="#">Buy Now</a>  
+            </div>
+        </div>
+
+    </div>
+
+</section>
+<div class="go">
+    <a href="#top" id="gotop">Go back to top</a>
+</div>
+
+<footer>
+    <div class="footer">
+        <div class="col1">
+            <h3>Useful Links</h3><br>
+            <ul>
+            <li> <a href="index.html">Home</a></li><br>
+            <li><a href="contact.html">Contact us</a></li><br>
+            <li> <a href="hikkaduwa.html">Hikkaduwa</a></li><br>
+            <li> <a href="kosgoda.html">Kosgoda</a></li><br>
+            <li> <a href="bentota.html">Bentota</a></li><br>
+        </ul>
+        </div>
+        <div class="col2">
+            <a href="./index.html">Turtle Treasures</a>
+          <div class="par">  <br><p>Our Mission:<br> Our mission is to protect and conserve<br> the turtle population by raising public awareness,<br>implementing conservation stratergies that address <br>the main threats to their survival in order to<br> ensure their survival.</p></div>
+        </div>
+        <div class="col1">
+            <h3>Follow Us on</h3><br>
+            <ul>
+                <li><a href>Instagram</a></li><br>
+                <li><a href>Facebook</a></li><br>
+                <li><a href>Twitter</a></li><br>
+                <li><a href>Youtube</a></li><br>
+            </ul>
+
+        </div>
+    </div>
+
+
+    <!-- https://www.google.com/search?q=shell+necklace&rlz=1C1CHWL_enLK1053LK1053&sxsrf=APwXEdfbztt_oK3t2RYi7QGbnoWMkYyBOg:1685204167711&source=lnms&tbm=isch&sa=X&ved=2ahUKEwi9i6ne8pX_AhX57zgGHbPUAtsQ_AUoAXoECAIQAw&biw=1280&bih=577&dpr=1.5#imgrc=w9BJ-1cBvh1iNM -->
+    <!-- https://www.pinterest.com/pin/565412928221115208/ -->
+    <!-- https://www.ebay.com/itm/165808771019 -->
+    <!-- https://www.daraz.lk/products/new-shine-seashell-bracelet-for-men-and-women-i100642594.html -->
+    <!-- https://www.teepublic.com/t-shirt/33471478-sri-lanka-sea-turtle-design-vacay -->
+    <!-- https://www.etsy.com/dk-en/listing/619541264/seashell-picture-frame-nautical-coastal -->
+    </footer>
+
+
+</body>
+</html>

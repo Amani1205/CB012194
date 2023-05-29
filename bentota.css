@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Chakra+Petch:wght@300&family=Courgette&family=Laila:wght@500&display=swap&family=Comme');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+/* navigation bar */
+
+header{
+    display: flex;
+    width: 100%;
+    height: 15vh;
+    padding: 10px;
+    background-color: rgb(12, 12, 79);
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.logo a{
+    font-size: 1.875rem;
+    float:left;
+    color: white;
+    cursor:pointer;
+    text-decoration: none;
+    font-family:'Courgette';
+    margin-left:20px;
+}
+
+.nav{
+    margin: 1rem;
+    padding: 1rem;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.nav ul li a{
+    display: block;
+    text-decoration: none;
+    padding: 10px 10px;
+    font-size: 0.9rem;
+    margin-left: 2px;
+    color:white;
+    font-family: 'Chakra Petch', sans-serif;
+
+}
+.nav ul li:hover{
+    background-color: rgb(18, 81, 136);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.596);
+}
+
+
+
+.nav ul {
+    list-style: none;
+}
+
+.nav ul li{
+    display: inline-block;
+    position: relative;
+    transition:all ease-in-out 0.3s;
+
+}
+
+.nav ul li ul.dropdown li{
+    display: block;
+}
+
+.nav ul li ul.dropdown {
+    width: 100%;
+    background:  rgb(12, 12, 79);
+    position: absolute;
+    z-index: 1;
+    display:none;
+}
+.nav ul li:hover ul.dropdown{
+    display: block;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+
+}
+.active{
+    background-color: rgb(18, 81, 136);
+}
+
+
+/*below codes are to make the nav bar responsive when the screen size is reduced*/
+
+
+.menu{
+    display: none; /*In the normal desktop view the 3 lines wont be visible*/
+    height: fit-content;
+    cursor: pointer;
+    padding: 3px 1rem; /*padding of the 3 lines*/
+    transition: all ease-in-out 0.5s;
+}
+.menu:hover{
+    background: #0f5286;
+    border-radius: 10px;
+}
+.menu div{
+    background: #ffffff;
+    width: 2rem;
+    height: 2px;
+    margin: 7px 0;
+}
+@media only screen and (max-width: 1100px) {
+    header{
+        padding: 0 20px;
+    }
+    .nav{
+        width: 250px;
+        height: 70vh;
+        margin:0; /*margin around the menu box*/
+        display: block; /*takes entire area*/
+        position: absolute;
+        left: -400px;
+        top: 0;
+        z-index: 2;
+        background-color: rgb(12, 12, 79);
+        transition: all ease-in-out 0.2s;
+        box-shadow: 2px 0 20px 0 rgb(0, 0, 0, 0.05);
+    
+        
+
+    }
+    #nav_check:checked ~ nav /*checked- selects every checked input type*/{
+        left: 0; /*makes the nav bar visible when clicked on*/
+    }
+
+    .nav ul li{
+        display: block;
+        margin-top: 0.5rem; /*on top of each link in menu*/
+    }
+    .menu{
+        display:block; /*the three white lines being displayed when screen size reduced*/
+    }
+    ul.dropdown{
+        margin: 0px;
+    }
+    .nav ul li ul.dropdown{
+       display: block;
+       z-index: 0;
+       position: relative;
+    }
+
+
+}
+
+/* Main image */
+/* Background*/
+.background{
+    width:100%;
+    height:100vh;
+}
+.background img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    
+    
+}
+
+
+h1{
+    text-align: center;
+    font-size: 38px;
+    background: linear-gradient(rgb(26, 104, 156),white);
+    padding:3rem
+}
+
+
+/* first section-introduction */
+.content{
+    margin:5% 5% 10% 5%
+}
+
+.content h2{
+    font-size: 2rem;
+    margin-bottom: 2%;
+    width:fit-content;
+    border-bottom: 3px solid rgb(12, 12, 90);
+ 
+}
+
+.content .image img{
+    float:left;
+    width:300px;
+    margin-right: 5%;
+    border-radius: 30px;
+    animation: animate 5s linear 5;
+}
+
+/* animation for the image to flip */
+@keyframes animate {
+    0%{
+        transform: rotateX(0deg);
+    }
+    20%{
+        transform: rotateX(0deg);
+    }
+    50%{
+        transform: rotateX(180deg);
+    }
+    80%{
+        transform: rotateX(0deg);
+    }
+    100%{
+        transform: rotateX(0deg);
+    }
+
+}
+
+
+.content p{
+    margin-top: 2%;
+    font-size: 1.2rem;
+    background: linear-gradient(rgba(28, 112, 148, 0.584),white);
+    padding:3rem;
+    border-radius: 30px;
+}
+
+/* Map */
+
+.bentota-map {
+    margin: 5%;
+}
+
+.bentota-map h3{
+    font-size: 2rem;
+    margin-bottom: 2%;
+    text-align: center;
+
+}
+
+.bentota-map iframe{
+    width:80%;
+    margin-left:10%;
+    border-radius:30px;
+    box-shadow: 20px 20px 20px rgb(76, 114, 158);
+}
+
+.details{
+    width:40%;
+    background-color: rgba(96, 166, 207, 0.358);
+    margin-left: 30%;
+    padding:5%;
+    font-size: 1.2rem;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 20px 20px 10px rgba(81, 128, 190, 0.509);
+    margin-top: 5%;
+    transition:all ease-in-out 0.5s;
+    cursor: pointer;
+   
+
+}
+
+.details:hover{
+    scale:1.1
+}
+
+
+.details ul li{
+    list-style: none;
+}
+
+/* 3rd section-Reviews */
+
+.content2 h3{
+    font-size: 2rem;
+    text-align: center;
+    background-color: rgb(84, 117, 169);
+    margin-bottom: 3%;
+    color:white;
+    padding:1rem
+}
+
+.content2 {
+   margin: 5%;
+   background-color: rgba(129, 206, 230, 0.655);
+   
+;
+    
+    
+}
+.content2 .review-container h4{
+    text-align: center;
+    border-bottom: 3px solid black;
+    width:fit-content;
+    margin-left: 3%;
+    font-size: 20px;
+   
+}
+
+.content2 .review-container p{
+   padding:3%
+}
+
+
+
+/*Footer*/
+.footer{
+    margin-top: 1rem;
+    width:100%;
+    padding:1.2rem 0.625rem;
+    background:#0e315a;
+    color:aliceblue;
+    display:flex
+}
+.footer div{
+    text-align: center;
+    flex-grow: 2;
+}
+.footer .col1  li{
+    list-style: none;
+    color:aliceblue;
+}
+.footer a{
+    color: aliceblue;
+    padding:5px;
+    text-decoration: none;
+    transition: 1s ease;
+}
+.footer a:hover{
+    background-color:#558fa2;
+    border-radius: 2px;
+    box-shadow: 10px 10px 10px rgb(1, 23, 70);
+}
+
+.footer .col2{
+    font-family:'Courgette' ;
+    font-size: 30px;
+}
+.footer p{
+    font-family: 'laila';
+    font-size: medium;
+    text-align: center;
+}
+
+@media screen and (max-width:600px)
+ {
+    .footer{
+        display:flex;
+        flex-direction: column;
+    }
+    .footer .col1 h3 {
+        margin-top: 10%;
+    }
+}
+
+@media screen and (max-width:500px) and (min-width:300px){
+    .content .image img{
+        margin:5%;
+    }
+}
+
+
+@media screen and (max-width:750px) and (min-width:350px){
+.background{
+    height:50vh;
+    }
+    h1{
+        font-size:2rem ;
+    }
+
+    .details{
+        width:70%;
+        margin:15%
+    }
+}
+
+@media screen and (max-width:1000px) and (min-width:750px){
+    .background{
+        height:60vh;
+        }
+}
+
+#gotop{
+    text-decoration: none;
+    background-color: rgb(45, 161, 188);
+    color:white;
+    padding:0.5rem;
+    margin-left:5%;
+    border-radius: 1rem;
+}
+
+.go{
+    margin:2%
+}

@@ -1,0 +1,602 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Chakra+Petch:wght@300&family=Courgette&family=swap&family=Comme');
+ 
+
+/* Dry standards conformant css */
+:root{
+    --parfont:18px;
+    --headfont:1.8rem;}
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    
+    
+    background-color: white;
+
+ }
+/* navigation bar */
+header{
+    display: flex;
+    width: 100%;
+    height: 15vh;
+    padding: 10px;
+    background-color: rgb(12, 12, 79);
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.logo a{
+    font-size: 1.875rem;
+    float:left;
+    color: white;
+    cursor:pointer;
+    text-decoration: none;
+    font-family:'Courgette';
+    margin-left:20px;
+}
+
+.nav{
+    margin: 1rem;
+    padding: 1rem;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.nav ul li a{
+    display: block;
+    text-decoration: none;
+    padding: 10px 10px;
+    font-size: 0.9rem;
+    margin-left: 2px;
+    color:white;
+    font-family: 'Chakra Petch', sans-serif;
+
+}
+.nav ul li:hover{
+    background-color: rgb(18, 81, 136);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.596);
+}
+
+
+
+.nav ul {
+    list-style: none;
+}
+
+.nav ul li{
+    display: inline-block;
+    position: relative;
+    transition:all ease-in-out 0.3s;
+
+}
+
+.nav ul li ul.dropdown li{
+    display: block;
+}
+
+.nav ul li ul.dropdown {
+    width: 100%;
+    background:  rgb(12, 12, 79);
+    position: absolute;
+    z-index: 1;
+    display:none;
+}
+.nav ul li:hover ul.dropdown{
+    display: block;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+
+}
+.active{
+    background-color: rgb(18, 81, 136);
+}
+
+
+/*below codes are to make the nav bar responsive when the screen size is reduced*/
+
+
+.menu{
+    display: none; /*In the normal desktop view the 3 lines wont be visible*/
+    height: fit-content;
+    cursor: pointer;
+    padding: 3px 1rem; /*padding of the 3 lines*/
+    transition: all ease-in-out 0.5s;
+}
+.menu:hover{
+    background: #0f5286;
+    border-radius: 10px;
+}
+.menu div{
+    background: #ffffff;
+    width: 2rem;
+    height: 2px;
+    margin: 7px 0;
+}
+@media only screen and (max-width: 1100px) {
+    header{
+        padding: 0 20px;
+    }
+    .nav{
+        width: 250px;
+        height: 70vh;
+        margin:0; /*margin around the menu box*/
+        display: block; /*takes entire area*/
+        position: absolute;
+        left: -400px;
+        top: 0;
+        z-index: 2;
+        background-color: rgb(12, 12, 79);
+        transition: all ease-in-out 0.2s;
+        box-shadow: 2px 0 20px 0 rgb(0, 0, 0, 0.05);
+    
+        
+
+    }
+    #nav_check:checked ~ nav /*checked- selects every checked input type*/{
+        left: 0; /*makes the nav bar visible when clicked on*/
+    }
+
+    .nav ul li{
+        display: block;
+        margin-top: 0.5rem; /*on top of each link in menu*/
+    }
+    .menu{
+        display:block; /*the three white lines being displayed when screen size reduced*/
+    }
+    ul.dropdown{
+        margin: 0px;
+    }
+    .nav ul li ul.dropdown{
+        display: block;
+        z-index: 0;
+        position: relative;
+     }
+
+}
+
+h1{
+    width:fit-content;
+    font-size: 2.4rem;
+    background: linear-gradient(rgba(46, 106, 143, 0.932),rgb(98, 142, 175));
+    padding: 0.8rem;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    box-shadow:10px 10px 20px rgba(51, 127, 168, 0.66);
+    font-family: comme;
+
+}
+/* main image */
+/* Background*/
+.background{
+    width:100%;
+    height:100vh;
+}
+.background img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    
+    
+}
+
+/* introduction for donations */
+.intro-don h2{
+    text-align: center;
+    margin:1rem;
+    font-size: var(--headfont);
+    background-color:rgba(91, 153, 180, 0.696);
+    color:black;
+    font-family: comme;
+    
+
+}
+.intro-don p{
+    text-align:justify;
+    margin:1rem 5rem;
+    font-size: var(--parfont);
+}
+
+/* Types of donation */
+.image img{ 
+    width: 300px;
+    float:left;
+    margin-right:2rem;
+    margin-left:2rem;
+    box-shadow: 20px 20px 20px rgb(62, 113, 126);
+    border-radius: 0.6rem;
+    transition:all ease-in-out 0.5s;
+}
+.image img:hover{
+    scale:1.1;
+}
+.wrapper{
+    margin-left:4%;
+    margin-bottom:5%;
+    margin-right: 6%;
+}
+.text-box{
+    margin-bottom: 5%;
+    font-size: var(--parfont);
+}
+.text-box h3{
+    font-size: 25px;
+    margin-bottom: 1%;
+    font-family: comme;
+}
+h2{
+    text-align: center;
+    margin: 3% 0%;
+    background-color:rgba(91, 153, 180, 0.696);
+    font-size: var(--headfont);
+    font-family: comme;
+}
+
+/* amount of donations collected */
+
+#seventy{
+    background-color: rgb(22, 59, 194);
+    width:30%;
+    height:50px;
+    margin-left: 400px;
+    margin-top: 20px;
+    animation-name: y;
+    animation-delay: -2s;
+    animation-duration: 7s;
+    text-align: center;
+    animation-iteration-count: infinite;
+    color:white;
+    padding:1rem
+}
+
+@keyframes y{
+   from{width:0%; background-color:rgb(52, 85, 96);}
+   to{width:30%; background-color: rgb(63, 63, 120); color:white;}
+ 
+}
+
+#fifty{
+    background-color: rgb(22, 59, 194);
+    width:20%;
+    height:50px;
+    margin-left: 400px;
+    margin-top: 20px;
+    animation-name: x;
+    animation-delay: -2s;
+    animation-duration: 7s;
+    text-align: center;
+    animation-iteration-count: infinite;
+    color:white;
+    padding:1rem
+}
+
+@keyframes x{
+    from{width:0%; background-color:rgb(52, 85, 96);}
+    to{width:20%; background-color: rgb(63, 63, 120); color:white;}
+  
+ }
+ #ninty{
+    background-color: rgb(22, 59, 194);
+    width:50%;
+    height:50px;
+    margin-left: 400px;
+    margin-top: 20px;
+    animation-name:z;
+    animation-delay: -2s;
+    animation-duration: 7s;
+    text-align: center;
+    animation-iteration-count: infinite;
+    color:white;
+    padding:1rem
+}
+
+@keyframes z{
+    from{width:0%; background-color:rgb(52, 85, 96);}
+    to{width:50%; background-color: rgb(63, 63, 120); color:white;}
+  
+ }
+ 
+
+@media screen and (max-width: 750px) and (min-width:200px){
+    #seventy{
+        margin-left:10%;
+        width:70%;
+        height:40px;
+        padding:12px
+    }
+    #fifty{
+        margin-left:10%;
+        width:50%;
+        height:40px;
+        padding:12px
+    }
+    #ninty{
+        margin-left:10%;
+        width:90%;
+        height:40px;
+        padding:12px
+    }
+    .text-box p{
+        width:100%;
+        
+    }
+    .text-box h3{
+        width:100%;
+        margin:5% 0% 2% 5%;
+        
+    }
+    .image img{
+        margin-left: 0rem;
+        float:none;
+        width:300px;
+        margin-bottom: 5%;
+    }
+    @keyframes y{
+        from{width:0%; background-color:rgb(52, 85, 96);}
+        to{width:70%; background-color: rgb(63, 63, 120); color:white;}
+      
+     }
+     @keyframes x{
+        from{width:0%; background-color:rgb(52, 85, 96);}
+        to{width:50%; background-color: rgb(63, 63, 120); color:white;}
+      
+     }
+     @keyframes z{
+        from{width:0%; background-color:rgb(52, 85, 96);}
+        to{width:90%; background-color: rgb(63, 63, 120); color:white;}
+      
+     }
+     
+  }
+
+
+
+
+
+/**Donation form*/
+.container{
+    background-image:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.3)), url(./images/donate/bg1.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    padding:20px;
+    margin:60px;
+    height:fit-content; 
+    font-weight: 900;
+    border-radius: 30px;
+
+}
+.container h3{
+    text-align: center;
+    font-size: var(--headfont);
+    background-color:rgb(48, 44, 32);
+    color:white;
+    font-family: comme;
+}
+
+input[type=text]{
+    padding:6px;
+    width:30%;
+    border:1px solid black;
+    text-align: center;
+    border-radius: 15px;
+    border:2px solid black;
+    
+}
+#pref{
+    width:20%;
+}
+#cvv{
+    padding:5px;
+    width:80px;
+    margin:10px;
+    border-radius: 15px;
+    border:2px solid black;
+    
+
+}
+#card{
+    padding:0.4rem;
+    border-radius: 15px;
+    text-align: center;
+    border:2px solid black;
+}
+input[type='radio']{
+    margin-left:80px;
+    margin-top: 2%; 
+    border:2px solid black; 
+
+}
+fieldset{
+    border-radius: 10px;
+    border:2px solid black;
+}
+fieldset label{
+    margin-left:3%;
+    font-size:1.5rem ;
+    
+}
+fieldset legend{  
+ font-size: 25px;
+}
+
+#btn{
+    width:100%;
+    padding:10px;
+    font-size: 20px;
+    color:white;
+    background:rgb(71, 57, 31);
+    cursor:pointer;
+    border-radius: 10px;
+    
+}
+#btn:hover{
+    background:rgb(18, 17, 4);
+}
+
+
+/* Product section */
+
+.products h3{
+    text-align: center;
+    font-size: var(--headfont);
+    margin-bottom:0.5%;
+    font-size: 35px;
+    
+    font-family: comme;
+    background-color:rgba(91, 153, 180, 0.696);
+}
+
+.all-products{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.product img{
+    width:200px;
+    border-radius: 40px;
+}
+.product{
+    
+    background:rgb(54, 85, 107);
+    color:black;
+    text-align: center;
+    width:240px;
+    height:400px;
+    padding:2rem;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin:2rem;
+    transform:0.3s; 
+    border-radius: 20px;
+    
+}
+
+.product:hover img{
+    scale: 1.1;
+}
+
+.product:hover{
+    box-shadow: 5px 10px 40px rgb(38, 123, 144);
+}
+
+.product-btn{
+    display:inline-block;
+    text-decoration: none;
+    background-color: rgb(9, 53, 65);
+    color:white;
+    padding:0.5rem 1.5rem;
+    border-radius: 1rem;
+    margin-top: 0.5rem;
+    transition:0.2s;    
+}
+.product a:hover{
+    background-color: rgb(18, 33, 61);
+    scale:1.1
+}
+
+
+
+
+#turt{
+    width:200px;
+    height:220px
+}
+
+.product-info{
+    margin-top: 10px;
+    background-color: rgb(84, 145, 180);
+    width:100%;
+    padding:10px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+
+#gotop{
+    text-decoration: none;
+    background-color: rgb(45, 161, 188);
+    color:white;
+    padding:0.5rem;
+    margin-left:5%;
+    border-radius: 1rem;
+}
+
+.go{
+    margin:2%
+}
+
+
+/*Footer*/
+.footer{
+    margin-top:1rem;
+    width:100%;
+    padding:1.2rem 0.625rem;
+    background:#0e315a;
+    color:aliceblue;
+    display:flex
+}
+.footer div{
+    text-align: center;
+    flex-grow: 2;
+}
+.footer .col1  li{
+    list-style: none;
+    color:aliceblue;
+}
+.footer a{
+    color: aliceblue;
+    padding:5px;
+    text-decoration: none;
+    transition: 1s ease;
+}
+.footer a:hover{
+    background-color:#558fa2;
+    border-radius: 2px;
+    box-shadow: 10px 10px 10px rgb(1, 23, 70);
+}
+
+.footer .col2{
+    font-family:'Courgette' ;
+    font-size: 30px;
+}
+.footer p{
+    font-family: 'laila';
+    font-size: medium;
+    text-align: center;
+}
+
+@media screen and (max-width:600px)
+ {
+    .footer{
+        display:flex;
+        flex-direction: column;
+    }
+    .footer .col1 h3 {
+        margin-top: 10%;
+    }
+}
+
+@media screen and (max-width:750px) and (min-width:350px){
+    .background{
+        height:50vh;
+        }
+     h1{
+            font-size:2rem ;
+        }
+    .container{
+        margin:1%
+    }    
+
+}
+
+@media screen and (max-width:1000px) and (min-width:750px){
+    .background{
+        height:60vh;
+        }
+}
